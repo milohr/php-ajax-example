@@ -47,16 +47,24 @@ class CRUD
     
     }
     
-    public function read($query)
-    {
+      public function read($query)
+    {     
+        $res = @mysqli_query($this->db, $query);        
+        return $res;
     }
-    
+
     public function update($query)
-    {
+    {    
+        if(mysqli_query($this->db, $query))
+            echo "Updated";
+        else echo mysqli_error($this->db);
     }
-    
+
     public function delete($query)
     {
+       if(mysqli_query($this->db, $query))
+            echo "Removed";
+        else echo mysqli_error($this->db);
     }
 
 

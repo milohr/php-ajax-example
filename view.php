@@ -22,7 +22,7 @@ form input
 
 
 <h2>Create contact</h2>
-<form method="post" action="#">
+<form method="post" action="main.php">
 <input type="text" placeholder="id" name="id" required></input>
 <input type="text" placeholder="name" name="name" required></input>
 <input type="text" placeholder="lastname" name="lastname" required></input>
@@ -31,7 +31,7 @@ form input
 </form>
 
 <h2>Search</h2>
-<form method="post" action="#">
+<form method="post" action="main.php">
 <input type="text" placeholder="query" name="query"  required></input>
 <input type="submit" value="search" name="search"></input>
 </form>

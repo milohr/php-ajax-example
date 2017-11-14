@@ -2,17 +2,36 @@
 
 require_once 'crud.php';
 
+
+
+if ( isset($_POST["create"]) ){
+if ( isset($_POST["id"]) && !empty($_POST["id"]) &&
+isset($_POST["name"]) && !empty($_POST["name"]) && 
+isset($_POST["lastname"]) && !empty($_POST["lastname"]) && isset($_POST["phone"]) && !empty($_POST["phone"]) )
+{
+
 $crud = new CRUD($db);
 
 $con = new Contact();
-$con->id = "y33637";
-$con->name = "GHK";
-$con->lastname = "KKK";
-$con->phone = "7364839";
+$con->id = $_POST["id"];
+$con->name = $_POST["name"];
+$con->lastname = $_POST["lastname"];
+$con->phone = $_POST["phone"];
 
 $crud->create($con);
 
 echo ("<h1>".$con."</h1>");
+}
+}else {
+    
+    echo ("<h1> it's not submit </h1>");
+
+}
+
+
+
+/*
+*/
 
 
 
