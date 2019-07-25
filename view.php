@@ -49,10 +49,10 @@ form input
 function sendData()
 {
     
-    var id = document.getElementById('id')
-    var name = document.getElementById('name')
-    var lastname = document.getElementById('lastname')
-    var phone = document.getElementById('phone')
+    var id = document.getElementById('id').value
+    var name = document.getElementById('name').value
+    var lastname = document.getElementById('lastname').value
+    var phone = document.getElementById('phone').value
     
     $.ajax({
         
